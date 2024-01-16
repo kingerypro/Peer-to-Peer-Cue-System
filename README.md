@@ -1,5 +1,12 @@
 <div style="white-space: pre;">
-
+Ender 3 Series Controller V2: Integrated with the Peer-to-peer Cue System to the bottom of this readme. 
+# Extended CUE commands from the Jmcker Repo for their Open Sourced Peer-to-Peer-Cue-System: https://github.com/jmcker/Peer-to-Peer-Cue-System
+# Added console triggers to auto-click the controller buttons if cue response matches text (For ex: home printer) will automatically home the 
+# connected printer. f100 or f75 commands will auto-adjust the fan speed to 75% or 100%. This was reverse-engineered and reengineered to fit my
+# custom Ender Pro Series 3D Printer lineup.
+</div>
+<hr>
+<div style="white-space: pre;">
 # Peer-to-Peer Cue System #
 
 Cue system for simple two-way communication and visual signaling using a WebRTC peer-to-peer connection.
