@@ -1,4 +1,5 @@
 <div style="white-space: pre;">
+  YouTube Video + Profile: https://www.youtube.com/shorts/6vAsKlMR9q0
   https://github.com/kingerypro/ender-3-series-upc
   THIS P2P REPO IS FORKED - THE CONTROLLER IS CUSTOM.
 Ender 3 Series Controller V2: Integrated with the Peer-to-peer Cue System to the bottom of this readme. 
