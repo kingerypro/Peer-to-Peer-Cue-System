@@ -1,4 +1,5 @@
 <div style="white-space: pre;">
+  https://github.com/kingerypro/ender-3-series-upc
 Ender 3 Series Controller V2: Integrated with the Peer-to-peer Cue System to the bottom of this readme. 
 # Extended CUE commands from the Jmcker Repo for their Open Sourced Peer-to-Peer-Cue-System: https://github.com/jmcker/Peer-to-Peer-Cue-System
 # Added console triggers to auto-click the controller buttons if cue response matches text (For ex: home printer) will automatically home the 
