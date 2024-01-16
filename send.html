@@ -4,10 +4,118 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width">
         <title>Peer-to-Peer Cue System --- Sender</title>
-        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    background-color: white;
+	min-width: 450px;
+}
+
+h1 {
+    font-size: 1.75em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4em; 
+}
+
+td {
+    width: 50%;
+}
+
+input {
+	margin-bottom: 5px;
+}
+
+a:visited{ 
+	color: blue; 
+}
+
+.display {
+    width: 100%;
+    min-height: 400px;
+    padding-bottom: 20px;
+}
+
+.control {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.control-button {
+    width: 100%;
+    min-height: 50px;
+}
+
+.display-box {
+    border: 2px solid black;
+}
+
+.title {
+    vertical-align: top;
+}
+
+.standby {
+    background-color: red;
+}
+
+.go {
+    background-color: green;
+}
+
+.fade {
+    background-color: yellow;
+}
+
+.off {
+    background-color: gray;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.no-display {
+    display: none;
+}
+
+.status {
+    height: 125px;
+    vertical-align: text-top;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid black;
+    
+}
+
+.message {
+    height: 125px;
+    max-height: 125px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid black;
+    overflow: auto;
+}
+
+.msg-time {
+    color: blue;
+}
+
+.cueMsg {
+    color: orange;
+}
+
+.selfMsg {
+    color: green;
+}
+
+.peerMsg {
+    color: red;
+}
+        </style>
     </head>
     <body>
-        <h1>Peer-to-Peer Cue System --- Sender</h1>
+        <h1>Peer-to-Peer --- Sender</h1>
 
         <table class="control">
             <tr>
@@ -43,7 +151,23 @@
                     <button type="button" class="control-button" id="fadeButton">Fade</button>
                 </td>
                 <td>
+                    <button type="button" class="control-button" id="homeButton">Home Printer</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <button type="button" class="control-button" id="offButton">Off</button>
+                </td>
+                <td>
+                    <button type="button" class="control-button" id="f100Button">Fan 100%</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" class="control-button" id="f75Button">Fan 75%</button>
+                </td>
+                <td>
+                    <button type="button" class="control-button" id="#">More being built...</button>
                 </td>
             </tr>
         </table>
@@ -61,7 +185,10 @@
                 var goButton = document.getElementById("goButton");
                 var resetButton = document.getElementById("resetButton");
                 var fadeButton = document.getElementById("fadeButton");
+                var homeButton = document.getElementById("homeButton");
                 var offButton = document.getElementById("offButton");
+                var f100Button = document.getElementById("f100Button");
+                var f75Button = document.getElementById("f75Button");
                 var sendMessageBox = document.getElementById("sendMessageBox");
                 var sendButton = document.getElementById("sendButton");
                 var clearMsgsButton = document.getElementById("clearMsgsButton");
@@ -195,6 +322,15 @@
                 });
                 offButton.addEventListener('click', function () {
                     signal("Off");
+                });
+                homeButton.addEventListener('click', function () {
+                    signal("Home Printer");
+                });
+                f100Button.addEventListener('click', function () {
+                    signal("f100");
+                });
+                f75Button.addEventListener('click', function () {
+                    signal("f75");
                 });
 
                 function addMessage(msg) {
